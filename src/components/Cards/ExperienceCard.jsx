@@ -142,8 +142,6 @@ const Skill = styled.div`
     }
 `
 
-
-
 const ExperienceCard = ({ experience }) => {
     return (
         <Card>
