@@ -6,6 +6,8 @@ import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 
 
 const Navbar = () => {
@@ -34,9 +36,12 @@ const Navbar = () => {
        
         <ButtonContainer>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
+          <SocialMediaIcon stylr={{}} href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
         </SocialMediaIcons>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+        <SocialMediaIcons>
+          <SocialMediaIcon stylr={{}} href={Bio.github} target="display"><GitHubIcon /></SocialMediaIcon>
+        </SocialMediaIcons>
+          <GitHubButton href="https://calendly.com/nisargpateldev/30min" target="_blank">Book a Meeting</GitHubButton>
         </ButtonContainer>
         {
           isOpen &&
@@ -56,7 +61,12 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+          <div>
+          <SocialMediaIcon stylr={{padding: '10px 10px'}} href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
+            <SocialMediaIcon style={{padding: '10px 16px'}} href={Bio.github} target="display"><GitHubIcon /></SocialMediaIcon>
+          </div>
+           
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href="https://calendly.com/nisargpateldev/30min" target="_blank">Book a Meeting</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>
